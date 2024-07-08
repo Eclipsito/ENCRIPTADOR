@@ -1,0 +1,127 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #E5E5E5;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    background: #FFFFFF;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.input-section, .output-section {
+    padding: 20px;
+    flex: 1;
+    min-width: 300px;
+}
+
+.input-section {
+    border-right: 1px solid #E0E0E0;
+}
+
+.input-section .logo {
+    width: 40px;
+    margin-bottom: 20px;
+}
+
+.input-section h1 {
+    font-size: 24px;
+    color: #0A376F;
+}
+
+textarea {
+    width: 100%;
+    height: 150px;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.options span {
+    font-size: 12px;
+    color: #999;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 4px;
+    background-color: #0A376F;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #082d57;
+}
+
+.output-section {
+    text-align: center;
+}
+
+.output-container {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #E0E0E0;
+    border-radius: 4px;
+}
+
+.output-container p {
+    margin: 5px 0;
+    color: #0A376F;
+    font-size: 14px;
+}
+
+textarea#outputText {
+    width: 100%;
+    height: 150px;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    display: none;
+}
+
+button#copyButton {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .input-section {
+        border-right: none;
+        border-bottom: 1px solid #E0E0E0;
+    }
+
+    textarea#outputText,
+    button#copyButton {
+        display: block;
+    }
+}
